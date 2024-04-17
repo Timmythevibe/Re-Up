@@ -1,0 +1,342 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header{
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 20px;
+    background: #121214;
+}
+
+header .navbar{
+    max-width: 1280px;
+    margin: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.nav-search {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.select-search {
+    background: #f3f3f3;
+    width: 45px;
+    text-align: center;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: none;
+}
+
+.search-input {
+    max-width: 400px;
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+
+.search-icon {
+    max-width: 65px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background: #ffffff;
+    color: #000000;
+    cursor: pointer;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.navbar .menu-links{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar .menu-links li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar .menu-links .language-item a{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.navbar .menu-links .language-item span{
+    font-size: 1.3rem;
+}
+
+.navbar .menu-links li a:hover{
+    color: #1dbf73;
+}
+
+.navbar .menu-links .join-btn a{
+    border: 1px solid #fff;
+    padding: 8px 15px;
+    border-radius: 4px;
+}
+
+.navbar .menu-links.join-btn a:hover{
+    color: #fff;
+    border-color: transparent;
+    background: #1dbf73;
+}
+
+.hero-section {
+    height: 400px;
+    background-image: url("./Assets/storeback.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+@media screen and (max-width: 900px) {
+    
+    .navbar .nav-search .menu-links{
+        height: 100vh;
+        max-width: 300px;
+        width: 100%;
+        background: #fff;
+        position: fixed;
+        left: -300px;
+        top: 0;
+        display: block;
+        padding: 75px 40px 0;
+        transition: left 0.2s ease;
+    }
+
+    .navbar .nav-search .menu-links li{
+        margin-bottom: 30px;
+    }
+
+    .navbar .nav-search .menu-links li{
+        color: #000;
+        font-size: 1.1rem;
+    }
+    
+    .navbar .nav-search .menu-links .join-btn a{
+        padding: 0;
+    }
+    
+    .navbar .nav-search .menu-links .join-btn a:hover{
+        color: #1dbf73;
+        background: none;
+    }
+    
+    .hero-section{
+        height: 450px;
+        background:url(./Assets/thatshii.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.shop-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f3f3f3;
+    padding: 50px 0;
+}
+
+.shop-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1280px;
+    width: 100%;
+}
+
+.shop-link {
+    background-color: #fff;
+    padding: 30px;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    white-space: nowrap;
+}
+
+.shop-link img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.shop-link h3 {
+    margin-bottom: 10px;
+}
+
+.shop-link a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: blue;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.shop-link:hover a {
+    color: #c7511f;
+    text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+    .shop-section .shop-images .shop-link{
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .shop-section{
+        margin: 0 auto;
+    }
+}
+
+.footer-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0e0e22;
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 600;
+    height: 60px;
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3.5rem;
+    padding: 60px;
+}
+
+.footer-row .footer-col h4 {
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.footer-col .links {
+    margin-top: 20px;
+}
+
+.footer-col .links li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.footer-col .links li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.footer-col .links li a:hover {
+    color: #000000;
+}
+
+.footer-col p {
+    margin: 20px 0;
+    color: #000000;
+    max-width: 300px;
+}
+
+.footer-col form {
+    display: flex;
+    gap: 5px;
+}
+
+.footer-col input {
+    height: 40px;
+    border-radius: 6px;
+    background: none;
+    width: 100%;
+    outline: none;
+    border: 1px solid #7489C6;
+    caret-color: #000000;
+    padding-left: 10px;
+}
+
+.footer-col input::placeholder {
+    color: #000000;
+}
+
+.footer-col form button {
+    background: #afb6c7;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s ease; 
+}
+
+.footer-col form button:hover {
+    background: #cecccc;
+}
+
+.footer-col .icons {
+    display: flex;
+    margin-top: 30px;
+    gap: 30px;
+    cursor: pointer;
+}
+
+.footer-col .icons i {
+    color: #afb6c7;
+}
+
+.footer-col .icons i:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+     .footer-row {
+        padding: 20px;
+        gap: 1rem;
+    }
+
+    .footer-col form {
+        display: block;
+    }
+
+    .footer-col form :where(input, button) {
+        width: 100%;
+    }
+
+    .footer-col form button {
+        margin: 10px 0 0;
+    }
+}
